@@ -28,3 +28,40 @@ function checkGrade() {
     const result = grade >= 60 ? "Passed" : "Failed";
     document.getElementById("result").textContent = `${letter} - ${result}`;
 }
+
+// Question 2
+// Convert a string into a number
+function typeConversion() {
+    const input = document.getElementById("input").value;
+    const convertedNumber = Number(input);
+
+    console.log(`"${input}" as a number is:`, convertedNumber);
+    console.log(`Type of converted value:`, typeof convertedNumber);
+
+    // Test truthy and falsy values
+    const values = [0, "", "hello", null, undefined, NaN];
+    const results = [];
+
+    for (const value of values) {
+        let displayValue;
+        if (value === "") {
+            displayValue = '"" (empty string)';
+        } else if (Number.isNaN(value)) {
+            displayValue = "NaN";
+        } else {
+            displayValue = String(value);
+        }
+
+        if (value) {
+            console.log(`${displayValue} (${typeof value}) is truthy`);
+            results.push(`${displayValue} is truthy`);
+        } else {
+            console.log(`${displayValue} (${typeof value}) is falsy`);
+            results.push(`${displayValue} is falsy`);
+        }
+    }
+
+    document.getElementById("conversionResult").textContent =
+        `"${input}" as a number is ${convertedNumber} (${typeof convertedNumber}). ` +
+        results.join("; ");
+}
