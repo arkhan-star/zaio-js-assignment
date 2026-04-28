@@ -16,6 +16,12 @@
                 <button onclick="typeConversion()">Convert</button>
                 <p id="conversionResult"></p>
             </section>
+            <section class="operator">
+                <input type="text" id="name" placeholder="Enter your name">
+                <input type="checkbox" id="isMorning"> Is it morning?
+                <button onclick="document.getElementById('greetingResult').textContent = greetingBot(document.getElementById('name').value, isMorning.checked)">Greet</button>
+                <p id="greetingResult"></p>
+            </section>
             <script src="index.js"></script>
         </body>
     </html>

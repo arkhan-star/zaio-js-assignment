@@ -65,3 +65,13 @@ function typeConversion() {
         `"${input}" as a number is ${convertedNumber} (${typeof convertedNumber}). ` +
         results.join("; ");
 }
+
+// Question 3 - Functions and Logical Operators
+
+function greetingBot(name, isMorning) {
+    if (isMorning) {
+        return `Good morning, ${name}!`;
+    } else {
+        return `Hello, ${name}!`;
+    }
+}
